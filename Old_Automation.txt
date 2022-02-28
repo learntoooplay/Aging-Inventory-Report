@@ -1,3 +1,9 @@
+' Approx date August 2019
+' John Theodorakis
+' File will take raw sales data and output cost analysis of stored models. No sample i/o for data security reasons.
+
+
+
 Sub inventoryAgingReport()
 
 sheetToData
@@ -868,6 +874,7 @@ Sub EOLInventory()
     Selection.Font.Bold = True
     Range(Cells(37, 24), Cells(49, 24)).Select
     Selection.Style = "Currency"
+    
 End Sub
 
 
@@ -1102,6 +1109,7 @@ Sub BTVRefurb()
     Selection.Font.Bold = True
     Range(Cells(59, 24), Cells(77, 24)).Select
     Selection.Style = "Currency"
+    
 End Sub
 
 Sub dataToSummary()
@@ -1207,4 +1215,5 @@ Sub dataToSummary()
         PivotFilters.Add2 Type:=xlValueDoesNotEqual, DataField:=ActiveSheet. _
         PivotTables("PivotTable41").PivotFields("Sum of Total"), Value1:=0
     Range("A2").Select
+    
 End Sub
